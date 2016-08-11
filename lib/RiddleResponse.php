@@ -44,7 +44,7 @@ class RiddleResponse
      */
     public function getLead()
     {
-        return $this->data->lead;
+        return isset($this->data->lead) ? $this->data->lead : null;
     }
 
     /**
@@ -68,7 +68,7 @@ class RiddleResponse
      */
     public function getAnswers()
     {
-        return $this->data->answers;
+        return isset($this->data->answers) ? $this->data->answers : null;
     }
 
     /**
@@ -77,7 +77,7 @@ class RiddleResponse
      */
     public function getResult()
     {
-        return $this->data->result;
+        return isset($this->data->result) ? $this->data->result : null;
     }
 
     /**
