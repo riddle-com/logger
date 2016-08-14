@@ -1,0 +1,30 @@
+{
+    "name": "riddle/riddle-webhook-libs",
+    "description": "Library for better handling Riddle webhooks",
+    "version" : "1.0.0-beta",
+    "type": "library",
+    "homepage": "https://www.riddle.com",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Reimar",
+            "email": "reimar@riddle.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "reimar@riddle.com"
+    },
+    "require": {
+        "php": ">=5.4",
+        "phpmailer/phpmailer": "^5.2",
+        "swiftmailer/swiftmailer": "@stable",
+        "google/apiclient": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "RiddleWebhook\\": "src"
+        }
+    }
+}

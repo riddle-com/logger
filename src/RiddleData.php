@@ -1,11 +1,13 @@
 <?php
 
+namespace RiddleWebhook;
+
 /**
- * RiddleResponse
+ * RiddleData
  *
- * @author Riddle Developers
+ * @author Reimar <reimar@riddle.com>
  */
-class RiddleResponse
+class RiddleData
 {
 
     private $data = null, $lead = array(), $createdAt = null;
@@ -17,7 +19,7 @@ class RiddleResponse
     public function __construct($json)
     {
         $this->data = json_decode($json);
-        $this->createdAt = date('Y-m-d H:i:s');
+        $this->createdAt = new \DateTime();
     }
 
     /**
@@ -96,44 +98,6 @@ class RiddleResponse
     public function getData()
     {
         return $this->data;
-    }
-
-    /**
-     * 
-     * @return string
-     */
-    public function getDataAsSimpleHtml()
-    {
-        $head = 'Riddle Webhook - ' . $this->getTitle() . ' (' . $this->getId() . ')';
-
-        $html = '<p><strong>' . $head . '</strong></p>';
-
-        if ($this->getLead()) {
-            $html.= '<p><strong>Lead</strong></p>';
-            foreach (get_object_vars($this->getLead()) as $_field => $_value) {
-                $html.= $_field . ': ' . $_value . '<br />';
-            }
-        }
-
-        if ($this->getAnswers()) {
-            $numberAnswers = count($this->getAnswers());
-            $html.= '<p><strong>Answers</strong></p>';
-            foreach ($this->getAnswers() as $_k => $_answer) {
-                $_count = ($_k + 1) . '/' . $numberAnswers;
-                $html.= '<p>';
-                $html.= 'Question ' . $_count . ': ' . $_answer->question . '<br/>';
-                $html.= 'Answer: ' . $_answer->answer . '<br/>';
-                $html.= 'Correct: ' . ($_answer->correct == 1 ? 'Yes' : 'No');
-                $html.= '</p>';
-            }
-        }
-
-        if ($this->getResult()) {
-            $html.= '<p><strong>Result</strong></p>';
-            $html.= $this->getResult();
-        }
-
-        return $html;
     }
 
 }
