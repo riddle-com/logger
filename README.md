@@ -12,6 +12,32 @@ your marketing software.
 ## Requirements
 PHP > 5.4
 
+## Installation
+You can use Composer or simply Download the ZIP
+
+### Composer
+The preferred method is via [composer](https://getcomposer.org). Follow the
+[installation instructions](https://getcomposer.org/doc/00-intro.md) if you do not already have
+composer installed.
+
+Once composer is installed, execute the following command in your project root to install this library:
+
+```sh
+composer require riddle/riddle-webhook-libs:dev-master
+```
+
+Finally, be sure to include the autoloader:
+
+```php
+require_once '/path/to/your-project/vendor/autoload.php';
+```
+
+Take a look at our files in examples folder.
+
+### Download the ZIP
+Uncompress the zip file you download ...
+@todo: finish this 
+
 ## Usage
 Upload files to your webserver and activate in your Riddle backend the custom
 webhook. Type in the url of the logger script. Ready.
