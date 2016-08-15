@@ -41,7 +41,7 @@ class RiddleLogger
             return false;
         }
         
-        echo $folder = dirname($this->file);
+        $folder = dirname($this->file);
         
         if (!file_exists($folder)) {
             mkdir($folder, 0777, true);
