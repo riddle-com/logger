@@ -14,64 +14,23 @@ PHP > 5.4
 
 ## Installation
 You can use Composer or simply Download the ZIP
+- [Composer](https://github.com/riddle-com/riddle-wekbook-libs/wiki/Install-with-composer)
+- [ZIP Download](https://github.com/riddle-com/riddle-wekbook-libs/wiki/Install-the-ZIP-download)
 
-### Composer
-The preferred method is via [composer](https://getcomposer.org). Follow the
-[installation instructions](https://getcomposer.org/doc/00-intro.md) if you do not already have
-composer installed.
+After installation activate in your Riddle backend the custom webhook. Type in the url of your script - ready.
 
-Once composer is installed, execute the following command in your project root to install this library:
-
-```sh
-composer require riddle/riddle-webhook-libs:dev-master
-```
-
-Finally, be sure to include the autoloader:
-
-```php
-require_once '/path/to/your-project/vendor/autoload.php';
-```
-
-Take a look at our files in examples folder.
-
-### Download the ZIP
-Uncompress the zip file you download ...
-@todo: finish this 
-
-## Usage
-Upload files to your webserver and activate in your Riddle backend the custom
-webhook. Type in the url of the logger script. Ready.
-
-### Receiving emails
-Receive email alert any time a user completes a lead gen form in your Riddle 
-content, so you can instantly follow up.
-
-### Save to a Google Document spreadsheet
-Seamlessly send all user information and responses from the Riddle lead gen form 
-to a Google Document spreadsheet.
-
-### Simple logging
-Write all user details and corresponding answers to any file. You can then write 
-a script to send all details to your CRM or other data system.
-
-#### Customization
-```php
-$logger->setFile('/path/to/your/logfile.log');
-$logger->setTimeFormat('r');
-```
-
-#### Recommendations
-Please make sure that your logfile has no public access, and change the path of 
-the logfile or set the document root of your webserver to 
-`/your/path/to/riddle/webhooks`. 
+## Webhook examples
+- [Receiving emails](https://github.com/riddle-com/riddle-wekbook-libs/wiki/Example-Mailer)
+- [Save to a Google Document spreadsheet](https://github.com/riddle-com/riddle-wekbook-libs/wiki/Example-Spreadsheet)
+- [Logger](https://github.com/riddle-com/riddle-wekbook-libs/wiki/Example-Logger)
 
 ## Upcoming scripts
-MySQL, CSV ...
+Save leads in MySQL, CSV ...
 Feel free to let us know your ideas. 
 
 ## Todo
 - .travis.yml
-- Documentation
+- Documentation and Wiki
 
 ## Any questions? 
 Just let us know at hello@riddle.com. 
