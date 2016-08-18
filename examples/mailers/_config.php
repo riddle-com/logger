@@ -53,6 +53,6 @@ function getMailSubject($riddle)
 function getMailBody($riddle)
 {
     ob_start();
-    include 'message_body.php';
+    include '_message_body.php';
     return ob_get_clean(); 
 }
