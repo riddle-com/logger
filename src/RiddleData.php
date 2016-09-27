@@ -18,6 +18,8 @@ class RiddleData
      */
     public function __construct($json)
     {
+//        $this->_checkRequest();     
+        
         $this->data = json_decode($json);
         $this->createdAt = new \DateTime();
     }
@@ -98,6 +100,17 @@ class RiddleData
     public function getData()
     {
         return $this->data;
+    }
+    
+    /**
+     * Check if request from riddle
+     */
+    private function _checkRequest()
+    {
+        if ($_SERVER['HTTP_ORIGIN'] !== 'https://www.riddle.com') {
+            header("HTTP/1.0 404 Not Found");
+            exit;
+        }
     }
 
 }
