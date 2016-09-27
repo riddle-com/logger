@@ -83,6 +83,15 @@ class RiddleData
     {
         return isset($this->data->result) ? $this->data->result : null;
     }
+    
+    /**
+     * 
+     * @return array
+     */
+    public function getResultData()
+    {
+        return isset($this->data->resultData) ? $this->data->resultData : null;
+    }
 
     /**
      * 
